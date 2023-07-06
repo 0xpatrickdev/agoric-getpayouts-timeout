@@ -38,8 +38,6 @@ const start = async (zcf) => {
     });
 
     E(timerService).setWakeup(expirationTime, expirationWaker(depositorSeat));
-    // Since the user is getting the payout through Zoe, we can
-    // return anything here. Let's return some helpful instructions.
 
     return Far('depositorFacet', {
       getCollateralAmount: () =>
@@ -63,9 +61,6 @@ const start = async (zcf) => {
 
   const publicFacet = Far('publicFacet', {});
 
-  // Return the creatorFacet to the creator, so they can make
-  // invitations for others to get payments of tokens. Publish the
-  // publicFacet.
   return harden({ creatorFacet, publicFacet });
 };
 
