@@ -7,6 +7,7 @@
   "scripts": {
     "build": "exit 0",
     "test": "ava --verbose",
+    "test:watch": "ava --verbose --watch",
     "lint": "eslint '**/*.{js,jsx}'",
     "lint-fix": "eslint --fix '**/*.{js,jsx}'",
     "lint-check": "eslint '**/*.{js,jsx}'",
